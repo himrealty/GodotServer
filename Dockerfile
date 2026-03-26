@@ -28,7 +28,7 @@ WORKDIR /app
 COPY godot_server /app/godot_server
 COPY godot_server.pck /app/godot_server.pck
 
-RUN chmod +x /app/godot_server
+RUN chmod +x /app/godot
 
 # user:// maps to this path for project name "headlessrender"
 RUN mkdir -p /root/.local/share/godot/app_userdata/headlessrender/packages/
@@ -42,4 +42,4 @@ ENV PORT=10000
 # FEEDER_SECRET = your secret key
 # RENDER_EXTERNAL_URL is injected automatically by Render
 
-CMD ["/app/godot_server", "--headless", "--main-pack", "/app/godot_server.pck"]
+CMD ["/app/godot", "--headless", "--main-pack", "/app/godot.pck"]
