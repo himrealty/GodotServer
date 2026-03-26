@@ -25,8 +25,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY godot_server /app/godot_server
-COPY godot_server.pck /app/godot_server.pck
+COPY godot /app/godot
+COPY godot.pck /app/godot.pck
 
 RUN chmod +x /app/godot
 
